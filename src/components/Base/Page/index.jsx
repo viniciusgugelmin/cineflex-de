@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import P from "prop-types";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 export const Page = ({ children, hasFooter, setTitleStyle }) => {
-  const router = useLocation();
+  const router = useNavigate();
+  //console.log(router);
 
   useEffect(() => {
     if (router.pathname === "/sucesso") {
